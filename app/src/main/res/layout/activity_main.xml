@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:outlineProvider="none"
+    android:textAlignment="center"
+    android:tooltipText="Enter the number of units Euros or Kilometers to be converted here"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/convert_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/output_textview">
+
+        <TextView
+            android:id="@+id/convert_what_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/convert_what" />
+
+        <RadioButton
+            android:id="@+id/euros_to_dollars_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/euros_to_dollars" />
+
+        <RadioButton
+            android:id="@+id/kilometers_to_miles_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/kilometers_to_miles" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/how_many_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/how_many"
+        app:layout_constraintBottom_toTopOf="@+id/units_to_convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/output_textview"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/units_to_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="80dp"
+        android:autofillHints="50"
+        android:ems="10"
+        android:hint="@string/units_to_convert"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="#A4000000"
+        android:textColorHint="#A4000000"
+        app:layout_constraintBottom_toTopOf="@+id/convert_radio_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/output_textview"
+        app:layout_constraintBottom_toTopOf="@+id/output_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:onClick="convertClick"
+        android:text="@string/convert_button"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert_radio_group"
+        app:layout_constraintVertical_bias="0.671" />
+
+    <TextView
+        android:id="@+id/output_textview"
+        android:layout_width="210dp"
+        android:layout_height="44dp"
+        android:background="@android:drawable/editbox_background"
+        android:outlineSpotShadowColor="#DD0707"
+        android:textAlignment="center"
+        android:textColor="#C9000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Switch
+        android:id="@+id/unit_switch"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002"
+        tools:checked="false" />
+
+    <TextView
+        android:id="@+id/reverse_conversion_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reverse_conversion_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unit_switch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Unit Converter App</string>
+
+    // default ui strings
+    <string name="convert_what">What would you like to convert?</string>
+    <string name="euros_to_dollars">Euros to Dollars</string>
+    <string name="kilometers_to_miles">Kilometers to Miles</string>
+    <string name="how_many">How many units would you like to convert?</string>
+    <string name="units_to_convert">Enter Units Here</string>
+    <string name="convert_button">convert</string>
+    <string name="output_textview">output</string>
+    <string name="reverse_conversion_textview">Reverse Conversion</string>
+</resources>
